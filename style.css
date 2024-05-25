@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.word-display {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.wrong-letters {
+    color: red;
+    margin-bottom: 20px;
+}
+
+#hangman {
+    width: 100px;
+    height: 200px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.part {
+    display: none;
+    position: absolute;
+    background-color: black;
+}
+
+#head {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 10px;
+    left: 35px;
+}
+
+#body {
+    width: 10px;
+    height: 50px;
+    top: 40px;
+    left: 45px;
+}
+
+#left-arm {
+    width: 10px;
+    height: 30px;
+    top: 40px;
+    left: 25px;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+}
+
+#right-arm {
+    width: 10px;
+    height: 30px;
+    top: 40px;
+    left: 65px;
+    transform: rotate(45deg);
+    transform-origin: top right;
+}
+
+#left-leg {
+    width: 10px;
+    height: 30px;
+    top: 90px;
+    left: 25px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+#right-leg {
+    width: 10px;
+    height: 30px;
+    top: 90px;
+    left: 65px;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+
+.keyboard {
+    margin-top: 20px;
+}
+
+.key {
+    font-size: 1.5em;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#victoryMessage, #congratsMessage {
+    font-size: 2em;
+    color: green;
+    margin-top: 20px;
+    animation: appear 2s ease-out forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#heartsContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+    }
+}

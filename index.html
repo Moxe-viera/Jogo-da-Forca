@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Forca</h1>
+        <div id="wordDisplay" class="word-display"></div>
+        <div id="wrongLetters" class="wrong-letters"></div>
+        <div id="hangman">
+            <div class="part" id="head"></div>
+            <div class="part" id="body"></div>
+            <div class="part" id="left-arm"></div>
+            <div class="part" id="right-arm"></div>
+            <div class="part" id="left-leg"></div>
+            <div class="part" id="right-leg"></div>
+        </div>
+        <div class="keyboard" id="keyboard"></div>
+        <div id="victoryMessage" class="hidden">Você venceu! Que tal namorar comigo?</div>
+        <div id="congratsMessage" class="hidden">Vai ser a mulher mais feliz dessa vida!</div>
+    </div>
+    <div id="heartsContainer" class="hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
